@@ -24,6 +24,12 @@ app.get("/now",
     }
 )
 
+app.get("/:word/echo", (req, res) => {
+    res.json({
+        echo: req.params.word
+    })
+})
+
 app.get("/", (req, res) => {
     absolutePath = __dirname + '/views/index.html';
     res.sendFile(absolutePath);
