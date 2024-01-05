@@ -11,11 +11,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/json", (req, res) => {
-    let message = {
-        "message": "Hello json"
-      }
-      
-    res.json(JSON.stringify(message));
+    res.json({
+        message: "Hello json"
+      });
 });
 
  module.exports = app;
