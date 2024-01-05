@@ -10,4 +10,12 @@ app.get("/", (req, res) => {
     res.sendFile(absolutePath);
 });
 
+app.get("/json", (req, res) => {
+    let message = {
+        "message": "Hello json"
+      }
+      
+    res.json(JSON.stringify(message));
+});
+
  module.exports = app;
